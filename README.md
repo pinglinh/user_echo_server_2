@@ -6,7 +6,7 @@ A simple server which takes and returns user's input until they enter "exit' whi
 * Ruby
 * Terminal
 
-#Usage
+##Usage
 
 1. Open terminal and run:
 
