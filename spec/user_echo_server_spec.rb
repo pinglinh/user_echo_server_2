@@ -1,5 +1,4 @@
 require_relative '../lib/user_echo_server'
-require_relative '../lib/command_line_view'
 require 'spec_helper'
 
 describe UserEchoServer do
@@ -30,4 +29,13 @@ describe UserEchoServer do
     message = view.instruction_message
     expect(output.string).to eq("Enter anything or exit to finish:\n")
   end
+
+  it 'prints out user\'s input with new line - 1 word' do
+    output = StringIO.new
+    view = CommandLineView.new(output)
+    user_view = view.echo_user_line("hello")
+    expect(output.string).to eq("hello\n")
+  end
+
+
 end
