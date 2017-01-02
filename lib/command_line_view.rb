@@ -14,4 +14,8 @@ class CommandLineView
   def echo_user_line(line)
     @output.puts line
   end
+
+  def goodbye_message
+    @output.puts "Goodbye!"
+  end
 end
