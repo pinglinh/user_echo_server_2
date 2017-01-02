@@ -3,9 +3,6 @@ require 'spec_helper'
 
 describe UserEchoServer do
 
-  # let(:output) { CommandLineView.new }
-  # let(:userechoserver) { UserEchoServer.new(output) }
-
   it 'should be an instance of userechoserver' do
     userechoserver = UserEchoServer.new
     userechoserver.should be_an_instance_of UserEchoServer
@@ -37,5 +34,11 @@ describe UserEchoServer do
     expect(output.string).to eq("hello\n")
   end
 
+  it 'prints out user\'s input with new line - 2 words' do
+    output = StringIO.new
+    view = CommandLineView.new(output)
+    user_view = view.echo_user_line("hello linh")
+    expect(output.string).to eq("hello linh\n")
+  end
 
 end
