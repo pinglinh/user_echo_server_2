@@ -59,4 +59,11 @@ describe UserEchoServer do
     line = user_echo_input.read_line
     expect(line).to eq("hello")
   end
+
+  it 'echoes what the user wrote' do
+    input = StringIO.new("one\ntwo\nthree\n")
+    output = StringIO.new
+    server = UserEchoServer.new(input, output)
+    server.start
+  end
 end
