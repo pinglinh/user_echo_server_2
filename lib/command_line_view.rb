@@ -4,7 +4,7 @@ class CommandLineView
   end
 
   def welcome_message
-    @output.puts "Welcome"
+    @output.puts "Welcome!"
   end
 
   def instruction_message
