@@ -24,10 +24,10 @@ describe UserEchoServer do
     expect(output.string).to eq("Welcome\n")
   end
 
-  # it 'prints out the instruction message' do
-  #   output = StringIO.new
-  #   view = CommandLineView.new(output)
-  #   message = view.instruction_message
-  #   expect(output.string).to eq("Enter anything or exit to finish:\n")
-  # end
+  it 'prints out the instruction message' do
+    output = StringIO.new
+    view = CommandLineView.new(output)
+    message = view.instruction_message
+    expect(output.string).to eq("Enter anything or exit to finish:\n")
+  end
 end
