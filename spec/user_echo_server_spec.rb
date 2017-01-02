@@ -47,4 +47,16 @@ describe UserEchoServer do
     message = view.goodbye_message
     expect(output.string).to eq("Goodbye!\n")
   end
+
+  it 'should be an instance of userechoinput' do
+    userechoinput = UserEchoInput.new
+    userechoinput.should be_an_instance_of UserEchoInput
+  end
+
+  it 'takes user\'s input - 1 word' do
+    input = StringIO.new("hello\n")
+    user_echo_input = UserEchoInput.new(input)
+    line = user_echo_input.read_line
+    expect(line).to eq("hello")
+  end
 end
