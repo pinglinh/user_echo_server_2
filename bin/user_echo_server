@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/user_echo_server'
+
+server = UserEchoServer.new
+server.start
