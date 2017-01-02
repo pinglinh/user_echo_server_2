@@ -41,4 +41,10 @@ describe UserEchoServer do
     expect(output.string).to eq("hello linh\n")
   end
 
+  it 'prints out the goodbye message' do
+    output = StringIO.new
+    view = CommandLineView.new(output)
+    message = view.goodbye_message
+    expect(output.string).to eq("Goodbye!\n")
+  end
 end
