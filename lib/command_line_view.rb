@@ -10,4 +10,8 @@ class CommandLineView
   def instruction_message
     @output.puts "Enter anything or exit to finish:"
   end
+
+  def echo_user_line(line)
+    @output.puts line
+  end
 end
