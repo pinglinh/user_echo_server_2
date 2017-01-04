@@ -3,16 +3,6 @@ require 'spec_helper'
 
 describe UserEchoServer do
 
-  it 'should be an instance of userechoserver' do
-    userechoserver = UserEchoServer.new
-    userechoserver.should be_an_instance_of UserEchoServer
-  end
-
-  it 'should be an instance of commandlineview' do
-    output = CommandLineView.new
-    output.should be_an_instance_of CommandLineView
-  end
-
   it 'prints out the welcome message' do
     output = StringIO.new
     view = CommandLineView.new(output)
@@ -46,11 +36,6 @@ describe UserEchoServer do
     view = CommandLineView.new(output)
     message = view.goodbye_message
     expect(output.string).to eq("Goodbye!\n")
-  end
-
-  it 'should be an instance of userechoinput' do
-    userechoinput = UserEchoInput.new
-    userechoinput.should be_an_instance_of UserEchoInput
   end
 
   it 'takes user\'s input - 1 word' do
