@@ -17,7 +17,7 @@ describe UserEchoServer do
     output = StringIO.new
     view = CommandLineView.new(output)
     message = view.welcome_message
-    expect(output.string).to eq("Welcome\n")
+    expect(output.string).to eq("Welcome!\n")
   end
 
   it 'prints out the instruction message' do
@@ -65,5 +65,12 @@ describe UserEchoServer do
     output = StringIO.new
     server = UserEchoServer.new(input, output)
     server.start
+    expect(output.string).to eq(
+      "Welcome!\n" +
+      "Enter anything or exit to finish:\n" +
+      "one\n" +
+      "two\n" +
+      "three\n"
+      )
   end
 end
