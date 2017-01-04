@@ -1,4 +1,3 @@
-require_relative '../lib/user_echo_input'
 require 'spec_helper'
 
 describe UserEchoInput do

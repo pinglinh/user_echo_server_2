@@ -1,4 +1,3 @@
-require_relative '../lib/user_echo_server'
 require 'spec_helper'
 
 describe UserEchoServer do

@@ -1,4 +1,3 @@
-require_relative '../lib/command_line_view'
 require 'spec_helper'
 
 describe CommandLineView do
