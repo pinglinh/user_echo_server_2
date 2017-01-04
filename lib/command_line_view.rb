@@ -1,5 +1,5 @@
 class CommandLineView
-  def initialize(output=STDOUT)
+  def initialize(output)
     @output = output
   end
 
