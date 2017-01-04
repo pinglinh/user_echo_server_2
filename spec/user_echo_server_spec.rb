@@ -55,7 +55,8 @@ describe UserEchoServer do
       "Enter anything or exit to finish:\n" +
       "one\n" +
       "two\n" +
-      "three\n"
+      "three\n" +
+      "Goodbye!\n"
       )
   end
 end
