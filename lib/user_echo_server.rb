@@ -5,8 +5,8 @@ class UserEchoServer
 EXIT = "exit"
 
   def initialize(input=STDIN, output=STDOUT)
-    @input = UserEchoInput.new
-    @output = CommandLineView.new
+    @input = UserEchoInput.new(input)
+    @output = CommandLineView.new(output)
   end
 
   def start
