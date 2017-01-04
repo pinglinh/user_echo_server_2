@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe UserEchoInput do
 
   it 'takes user\'s input - 1 word' do

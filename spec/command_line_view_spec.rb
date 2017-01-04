@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe CommandLineView do
 
 it 'prints out the welcome message' do

@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe UserEchoServer do
 
   it 'echoes what the user wrote' do
