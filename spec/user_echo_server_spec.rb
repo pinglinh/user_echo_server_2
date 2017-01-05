@@ -1,4 +1,16 @@
 describe UserEchoServer do
+  it 'echoes what the user wrote - 0 word' do
+    input = StringIO.new("")
+    output = StringIO.new
+    server = UserEchoServer.new(input, output)
+    server.start
+    expect(output.string).to eq(
+      "Welcome!\n" +
+      "Enter anything or exit to finish:\n" +
+      "Goodbye!\n"
+      )
+  end
+
   it 'echoes what the user wrote - 1 word' do
     input = StringIO.new("one\n")
     output = StringIO.new
