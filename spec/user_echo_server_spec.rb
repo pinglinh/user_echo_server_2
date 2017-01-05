@@ -1,5 +1,5 @@
 describe UserEchoServer do
-  it 'echoes what the user wrote' do
+  it 'echoes what the user wrote - 1 word' do
     input = StringIO.new("one\n")
     output = StringIO.new
     server = UserEchoServer.new(input, output)
@@ -12,7 +12,7 @@ describe UserEchoServer do
       )
   end
 
-  it 'echoes what the user wrote' do
+  it 'echoes what the user wrote - 2 words' do
     input = StringIO.new("one\ntwo\n")
     output = StringIO.new
     server = UserEchoServer.new(input, output)
@@ -26,7 +26,7 @@ describe UserEchoServer do
       )
   end
 
-  it 'echoes what the user wrote' do
+  it 'echoes what the user wrote - 3 words' do
     input = StringIO.new("one\ntwo\nthree\n")
     output = StringIO.new
     server = UserEchoServer.new(input, output)
