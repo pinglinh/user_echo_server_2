@@ -1,9 +1,9 @@
 describe CommandLineView do
 
-let(:output) { StringIO.new }
-let(:view) { CommandLineView.new(output) }
+  let(:output) { StringIO.new }
+  let(:view) { CommandLineView.new(output) }
 
-it 'prints out the welcome message' do
+  it 'prints out the welcome message' do
     view.welcome_message
     expect(output.string).to eq("Welcome!\n")
   end
