@@ -13,7 +13,7 @@ EXIT = "exit"
     @output.welcome_message
     @output.instruction_message
     @user_input = @input.read_line
-    until exit_entered? == true do
+    until exit_entered_true do
       @output.echo_user_line(@user_input)
       @user_input = @input.read_line
     end
@@ -24,5 +24,9 @@ EXIT = "exit"
 
   def exit_entered?
     @user_input == EXIT
+  end
+
+  def exit_entered_true
+    exit_entered? == true
   end
 end
