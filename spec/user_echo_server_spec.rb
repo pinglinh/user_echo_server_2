@@ -1,5 +1,4 @@
 describe UserEchoServer do
-
   it 'echoes what the user wrote' do
     input = StringIO.new("one\ntwo\nthree\n")
     output = StringIO.new
