@@ -1,5 +1,4 @@
 describe CommandLineView do
-
   let(:output) { StringIO.new }
   let(:view) { CommandLineView.new(output) }
 
@@ -27,5 +26,4 @@ describe CommandLineView do
     view.goodbye_message
     expect(output.string).to eq("Goodbye!\n")
   end
-
 end
