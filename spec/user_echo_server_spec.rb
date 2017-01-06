@@ -107,4 +107,15 @@ describe UserEchoServer do
       )
   end
 
+  it 'the server stops when user types EXIT - capital letters' do
+    input = StringIO.new("EXIT\n")
+    output = StringIO.new
+    server = UserEchoServer.new(input, output)
+    server.start
+    expect(output.string).to eq(
+      "Welcome!\n" +
+      "Enter anything or exit to finish:\n" +
+      "Goodbye!\n"
+      )
+  end
 end
