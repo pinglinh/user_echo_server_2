@@ -118,4 +118,28 @@ describe UserEchoServer do
       "Goodbye!\n"
       )
   end
+
+  it 'the server stops when user types Exit' do
+    input = StringIO.new("Exit\n")
+    output = StringIO.new
+    server = UserEchoServer.new(input, output)
+    server.start
+    expect(output.string).to eq(
+      "Welcome!\n" +
+      "Enter anything or exit to finish:\n" +
+      "Goodbye!\n"
+      )
+  end
+
+  it 'the server stops when user types eXIt' do
+    input = StringIO.new("eXIt\n")
+    output = StringIO.new
+    server = UserEchoServer.new(input, output)
+    server.start
+    expect(output.string).to eq(
+      "Welcome!\n" +
+      "Enter anything or exit to finish:\n" +
+      "Goodbye!\n"
+      )
+  end
 end
