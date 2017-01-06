@@ -23,7 +23,7 @@ EXIT = "exit"
   private
 
   def exit_entered?
-    @user_input == EXIT
+    @user_input.downcase == EXIT
   end
 
   def exit_entered_true
