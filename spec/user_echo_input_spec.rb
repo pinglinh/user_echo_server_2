@@ -33,4 +33,11 @@ describe UserEchoInput do
     line = user_echo_input.read_line
     expect(line).to eq("Hello linh nguyen")
   end
+
+  it 'takes user\'s input when they contain a mixture of uppercase and downcase letters' do
+    input = StringIO.new("helLo lINh\n")
+    user_echo_input = UserEchoInput.new(input)
+    line = user_echo_input.read_line
+    expect(line).to eq("helLo lINh")
+  end
 end
