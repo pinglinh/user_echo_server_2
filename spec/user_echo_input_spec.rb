@@ -19,4 +19,11 @@ describe UserEchoInput do
     line = user_echo_input.read_line
     expect(line).to eq("hello linh")
   end
+
+  it 'takes user\'s input - 3 word' do
+    input = StringIO.new("hello linh nguyen\n")
+    user_echo_input = UserEchoInput.new(input)
+    line = user_echo_input.read_line
+    expect(line).to eq("hello linh nguyen")
+  end
 end
