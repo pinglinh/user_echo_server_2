@@ -26,4 +26,11 @@ describe UserEchoInput do
     line = user_echo_input.read_line
     expect(line).to eq("hello linh nguyen")
   end
+
+  it 'takes user\'s input when they contain a capital letter first' do
+    input = StringIO.new("Hello linh nguyen\n")
+    user_echo_input = UserEchoInput.new(input)
+    line = user_echo_input.read_line
+    expect(line).to eq("Hello linh nguyen")
+  end
 end
